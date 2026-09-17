@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI자율주행시스템공학과 | 전공 체험 안내</title>
+<meta name="description" content="AI자율주행시스템공학과 전공 소개, 교과과정, F1TENTH·AMET·LIMO 프로젝트, 진로, 전공체험 안내" />
+<style>
+:root {
+  --bg:#07111f;
+  --panel:#0e1b2d;
+  --panel2:#12243a;
+  --text:#f4f7fb;
+  --muted:#a9b8cc;
+  --line:#243a56;
+  --cyan:#4cc9f0;
+  --blue:#4f8cff;
+  --green:#47d7ac;
+  --yellow:#ffd166;
+  --red:#ff6b6b;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",Arial,sans-serif;
+  background:linear-gradient(180deg,#06101d 0%,#091625 45%,#07111f 100%);
+  color:var(--text); line-height:1.65;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),92vw);margin:auto}
+nav{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(14px);
+  background:rgba(7,17,31,.82);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+.brand{font-weight:800;letter-spacing:-.02em}
+.menu{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.menu a:hover{color:#fff}
+.hero{padding:84px 0 54px}
+.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
+h1{font-size:clamp(38px,6vw,74px);line-height:1.05;margin:12px 0 20px;letter-spacing:-.045em}
+.hero p{font-size:clamp(18px,2.2vw,24px);color:#d7e0eb;max-width:860px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid var(--line);font-weight:700}
+.btn.primary{background:linear-gradient(135deg,var(--blue),var(--cyan));border:none;color:white}
+.btn.secondary{background:rgba(255,255,255,.04)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.stat{background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:18px;padding:20px}
+.stat b{font-size:24px;display:block}
+.stat span{color:var(--muted);font-size:14px}
+section{padding:56px 0}
+.section-title{font-size:clamp(28px,4vw,42px);margin:0 0 12px;letter-spacing:-.035em}
+.section-lead{color:var(--muted);font-size:18px;max-width:840px;margin:0 0 30px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(180deg,rgba(18,36,58,.95),rgba(12,27,45,.95));border:1px solid var(--line);border-radius:20px;padding:24px}
+.card h3{margin:0 0 10px;font-size:21px}
+.card p{margin:0;color:var(--muted)}
+.pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(76,201,240,.10);border:1px solid rgba(76,201,240,.28);color:#bfefff;font-size:12px;font-weight:700;margin:4px 5px 0 0}
+.curriculum-wrap{background:#fff;border-radius:20px;padding:14px;overflow:hidden;border:1px solid #d8e0ea}
+.curriculum-wrap img{display:block;width:100%;height:auto;border-radius:12px}
+.track{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.track h4{margin:0 0 10px;font-size:18px}
+.track ol{margin:0;padding-left:20px;color:var(--muted)}
+.pipeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:stretch}
+.step{background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;position:relative}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--cyan);font-weight:900;font-size:22px}
+.step b{display:block;margin-bottom:6px}
+.step small{color:var(--muted)}
+.project{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:center;margin-bottom:22px}
+.media-placeholder{min-height:280px;border:1px dashed #527092;border-radius:20px;display:grid;place-items:center;background:
+radial-gradient(circle at 30% 30%,rgba(79,140,255,.20),transparent 34%),
+linear-gradient(145deg,#0d1c2e,#132844)}
+.media-placeholder div{text-align:center;color:#bed0e6;padding:24px}
+.media-placeholder b{display:block;font-size:22px;margin-bottom:8px;color:#fff}
+.kicker{color:var(--green);font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.bullets{padding-left:20px;color:var(--muted)}
+.event-box{background:linear-gradient(135deg,rgba(79,140,255,.18),rgba(71,215,172,.12));border:1px solid #2b5572;border-radius:24px;padding:28px}
+.mission{font-size:clamp(26px,4vw,42px);font-weight:900;line-height:1.18;margin:6px 0 12px}
+.budget{width:100%;border-collapse:collapse;margin-top:18px}
+.budget th,.budget td{padding:12px;border-bottom:1px solid var(--line);text-align:left}
+.budget th{color:#cfe1f6}
+.budget td{color:var(--muted)}
+.footer{padding:44px 0 60px;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,.07)}
+.note{font-size:13px;color:#8fa3bb;margin-top:12px}
+@media(max-width:900px){
+  .stats,.grid-3,.track{grid-template-columns:1fr 1fr}
+  .pipeline{grid-template-columns:1fr}
+  .step:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-22px;transform:translateX(-50%)}
+  .project{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .menu{display:none}
+  .stats,.grid-3,.track{grid-template-columns:1fr}
+  .hero{padding-top:58px}
+  section{padding:42px 0}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <div class="brand">AI자율주행시스템공학과</div>
+    <div class="menu">
+      <a href="#about">전공소개</a>
+      <a href="#curriculum">교과과정</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#career">진로</a>
+      <a href="#event">체험</a>
+    </div>
+  </div>
+</nav>
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">AI × Robotics × Autonomous Driving</div>
+    <h1>AI가 보고,<br>판단하고, 움직이게 만든다.</h1>
+    <p>AI자율주행시스템공학과는 인공지능, 컴퓨터비전, 로봇, 센서, 제어, 자율주행 소프트웨어를 연결해 실제로 움직이는 지능형 시스템을 만드는 전공입니다.</p>
+    <div class="hero-actions"><a class="btn primary" href="#projects">실제 프로젝트 보기</a><a class="btn secondary" href="#curriculum">무엇을 배우는지 보기</a></div>
+    <div class="stats">
+      <div class="stat"><b>AI</b><span>딥러닝 · 컴퓨터비전 · 강화학습</span></div>
+      <div class="stat"><b>Robot</b><span>ROS2 · 센서 · 상태추정 · 제어</span></div>
+      <div class="stat"><b>Drive</b><span>경로계획 · 자율주행 SW · 모빌리티</span></div>
+      <div class="stat"><b>Project</b><span>F1TENTH · LIMO · AMET · VLM</span></div>
+    </div>
+  </div>
+</header>
+<section id="about"><div class="container"><h2 class="section-title">이 전공에서는 무엇을 하나요?</h2><p class="section-lead">핵심은 단순히 AI 모델을 만드는 것이 아니라, 센서로 세상을 인식하고 판단한 뒤 실제 로봇이나 차량이 움직이도록 만드는 것입니다.</p><div class="grid-3"><div class="card"><h3>1. 보고 👁</h3><p>카메라와 LiDAR 등으로 주변 환경을 인식합니다. 컴퓨터비전과 딥러닝으로 객체, 차선, 공간을 이해합니다.</p></div><div class="card"><h3>2. 판단하고 🧠</h3><p>현재 위치를 추정하고, 어디로 갈지 경로를 계획하고, 상황에 맞는 의사결정을 수행합니다.</p></div><div class="card"><h3>3. 움직인다 ⚙️</h3><p>제어 알고리즘을 이용해 조향, 속도, 모터를 움직여 계획한 행동을 실제 시스템에서 실행합니다.</p></div></div></div></section>
+<section id="curriculum"><div class="container"><h2 class="section-title">교과목 체계도</h2><p class="section-lead">기초수학과 프로그래밍에서 시작해 AI, 로봇, 제어, 자율주행으로 점차 확장됩니다.</p><div class="curriculum-wrap"><img src="assets/curriculum.png" alt="AI자율주행시스템공학과 교과목 체계도"></div><div class="track"><div class="card"><h4>AI & Perception</h4><ol><li>AI프로그래밍</li><li>딥러닝</li><li>컴퓨터비전</li><li>강화학습</li><li>생성형AI시스템</li><li>AI Agent</li></ol></div><div class="card"><h4>Robotics & Control</h4><ol><li>기초역학</li><li>모빌리티동역학</li><li>신호 및 시스템</li><li>자동제어</li><li>로봇공학</li><li>센서융합 및 최적추정</li></ol></div><div class="card"><h4>Autonomous System</h4><ol><li>로봇프로그래밍</li><li>자율주행SW설계</li><li>온디바이스 AI</li><li>자율이동로봇</li><li>인공지능플래닝</li><li>캡스톤디자인</li></ol></div></div></div></section>
+<section><div class="container"><h2 class="section-title">자율주행 시스템은 이렇게 연결됩니다</h2><p class="section-lead">수업에서 배우는 기술은 따로 떨어져 있지 않고 실제 시스템 안에서 하나의 파이프라인으로 연결됩니다.</p><div class="pipeline"><div class="step"><b>Sensor</b><small>Camera · LiDAR · IMU</small></div><div class="step"><b>Perception</b><small>Computer Vision · Deep Learning</small></div><div class="step"><b>Localization</b><small>Sensor Fusion · State Estimation</small></div><div class="step"><b>Planning</b><small>Path Planning · AI Planning</small></div><div class="step"><b>Control</b><small>Steering · Speed · Motion</small></div></div></div></section>
+<section id="projects"><div class="container"><h2 class="section-title">직접 해보는 프로젝트</h2><p class="section-lead">수업에서 배운 내용을 실제 로봇과 차량에 적용하면서 문제를 해결합니다.</p>
+<div class="project"><div class="media-placeholder"><div><b>F1TENTH 사진 / 주행 영상</b>여기에 실제 차량 사진 또는 15~30초 주행 영상을 넣으세요.</div></div><div><div class="kicker">Autonomous Racing</div><h3>F1TENTH 자율주행 레이싱</h3><p>1/10 스케일 차량에 ROS2, LiDAR, 경로계획과 제어 알고리즘을 적용해 스스로 트랙을 주행하게 만드는 프로젝트입니다.</p><ul class="bullets"><li>LiDAR 기반 주변 환경 인식</li><li>Gap Following / Pure Pursuit 등 주행 알고리즘</li><li>경로계획 및 MPC 등 제어 실험</li><li>시뮬레이션과 실제 차량 테스트</li></ul><span class="pill">ROS2</span><span class="pill">LiDAR</span><span class="pill">Planning</span><span class="pill">Control</span></div></div>
+<div class="project"><div><div class="kicker">Mobile Robotics</div><h3>LIMO 자율이동로봇</h3><p>카메라와 LiDAR를 사용하는 모바일 로봇으로 맵을 만들고, 자신의 위치를 추정하고, 목표 지점까지 자율주행하는 과정을 경험합니다.</p><ul class="bullets"><li>Mapping / Localization</li><li>ROS2 Navigation</li><li>센서 데이터 시각화</li><li>경로 생성 및 장애물 회피</li></ul><span class="pill">SLAM</span><span class="pill">Nav2</span><span class="pill">RViz</span><span class="pill">Robot</span></div><div class="media-placeholder"><div><b>LIMO 사진 / 영상</b>RViz 화면과 실제 로봇 주행 장면을 함께 넣으면 이해가 가장 빠릅니다.</div></div></div>
+<div class="project"><div class="media-placeholder"><div><b>AMET 대회 사진 / 영상</b>대회 현장 사진, 팀 사진, 로봇 또는 결과 화면을 넣으세요.</div></div><div><div class="kicker">Competition Experience</div><h3>AMET 대회 프로젝트</h3><p>수업과 프로젝트에서 배운 AI·로봇 기술을 실제 대회 환경에서 적용하면서 시스템 통합과 문제 해결 과정을 경험합니다.</p><ul class="bullets"><li>실제 환경에서 센서·SW·하드웨어 통합</li><li>예상치 못한 오류에 대한 현장 디버깅</li><li>팀 단위 문제 해결과 성능 개선</li></ul><span class="pill">Competition</span><span class="pill">Integration</span><span class="pill">Debugging</span></div></div>
+<div class="project"><div><div class="kicker">Vision-Language Navigation</div><h3>VLM 기반 자율주행 · Navigation</h3><p>이미지와 자연어 지시를 함께 이해하는 Vision-Language Model을 이용해, 주행 상황을 해석하고 행동을 선택하는 멀티모달 자율주행 프로젝트입니다.</p><ul class="bullets"><li>Navigation instruction + 연속 RGB 이미지 2장 입력</li><li>Qwen3-VL 기반 멀티모달 이해</li><li>Vision encoder 고정 + LoRA fine-tuning</li><li>4가지 주행 action 중 하나를 예측</li><li>이미지 인식과 언어 기반 의사결정을 하나의 모델로 연결</li></ul><span class="pill">VLM</span><span class="pill">Qwen3-VL</span><span class="pill">LoRA</span><span class="pill">Multimodal AI</span><span class="pill">Navigation</span></div><div class="media-placeholder"><div><b>VLM 입력 / 결과 화면</b>연속 RGB 이미지 2장, 자연어 지시문, 예측된 Driving Action을 한 화면에 보여주면 이해하기 쉽습니다.</div></div></div>
+</div></section>
+<section id="career"><div class="container"><h2 class="section-title">졸업 후 진로</h2><p class="section-lead">자동차 산업뿐 아니라 로봇, AI, 스마트팩토리, 물류, 드론 등 '스스로 인식하고 움직이는 시스템'이 필요한 분야로 확장할 수 있습니다.</p><div class="grid-3"><div class="card"><h3>자율주행 SW</h3><p>Perception · Localization · Planning · Control</p></div><div class="card"><h3>Robotics</h3><p>AMR · Service Robot · Industrial Robot · Drone</p></div><div class="card"><h3>AI / Vision</h3><p>Computer Vision · Deep Learning · On-device AI</p></div><div class="card"><h3>SLAM / State Estimation</h3><p>Sensor Fusion · Localization · Mapping</p></div><div class="card"><h3>Embedded / Edge AI</h3><p>Real-time AI · Device Deployment · Sensor Processing</p></div><div class="card"><h3>Mobility R&D</h3><p>Vehicle Dynamics · Control · Intelligent Mobility</p></div></div></div></section>
+<section id="event"><div class="container"><div class="event-box"><div class="kicker">Booth Mission</div><div class="mission">작은 로봇이 스스로 FINISH까지 갈 수 있을까?</div><p>부스에서는 라인트레이싱 또는 장애물 감지 미니 로봇을 이용해 간단한 자율주행 체험을 진행할 수 있습니다. 체험 후 실제 F1TENTH 영상으로 연결하면 '센서 → 판단 → 제어' 개념이 자연스럽게 이어집니다.</p><table class="budget"><tr><th>준비물</th><th>예상 용도</th><th>예산 예시</th></tr><tr><td>미니 로봇카 2대</td><td>라인 추종 / 장애물 감지</td><td>60,000~100,000원</td></tr><tr><td>라인 테이프 + 미니 라바콘</td><td>테이블 위 코스 제작</td><td>15,000~25,000원</td></tr><tr><td>A3 폼보드 / QR 출력</td><td>학과 및 프로젝트 안내</td><td>20,000~30,000원</td></tr><tr><td>소형 기념품</td><td>미션 성공 참가자 제공</td><td>20,000~30,000원</td></tr></table><p class="note">※ 가격은 판매처와 구성에 따라 달라질 수 있습니다. 행사 예산 20만원 안에서 충분히 구성 가능한 수준입니다.</p></div></div></section>
+<footer class="footer"><div class="container"><b>AI자율주행시스템공학과</b><br>AI · Robotics · Autonomous Driving<br><br>QR 코드로 이 페이지에 접속해 프로젝트와 교과과정을 확인하세요.</div></footer>
+</body></html>
